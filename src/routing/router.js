@@ -1,15 +1,15 @@
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React from "react";
 import { LandingPage } from "../views/landing-view";
 import { TopBar } from "../components/common/top-bar";
 import { BlogPage } from "../views/blog-view";
+import { SurveyPage } from "../views/survey-view";
 
 const Routing = () => {
   return (
     <Router>
-      <div>
-        <TopBar />
-        <Routes>
+      <Routes>
+        <Route element={<TopBar />}>
           <Route
             exact
             path="/"
@@ -19,8 +19,12 @@ const Routing = () => {
             path="/blog"
             element={<BlogPage />}
           />
-        </Routes>
-      </div>
+          <Route
+            path="/survey"
+            element={<SurveyPage />}
+          />
+        </Route>
+      </Routes>
     </Router>
   );
 };
