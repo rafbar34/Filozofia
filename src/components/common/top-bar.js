@@ -29,6 +29,10 @@ export const TopBar = () => {
           onClick={() => navigateTo("/survey")}
           title="Ankieta"
         />
+        <Field
+          onClick={() => navigateTo("/charts")}
+          title="Wykresy"
+        />
       </div>
       <div style={{ flex: 1, backgroundColor: "#f9f9f9", padding: "20px",}}>
 

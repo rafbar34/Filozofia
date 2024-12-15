@@ -4,6 +4,7 @@ import { LandingPage } from "../views/landing-view";
 import { TopBar } from "../components/common/top-bar";
 import { BlogPage } from "../views/blog-view";
 import { SurveyPage } from "../views/survey-view";
+import { ChartsPage } from "../views/charts-view";
 
 const Routing = () => {
   return (
@@ -22,6 +23,10 @@ const Routing = () => {
           <Route
             path="/survey"
             element={<SurveyPage />}
+          />
+          <Route
+            path="/charts"
+            element={<ChartsPage />}
           />
         </Route>
       </Routes>

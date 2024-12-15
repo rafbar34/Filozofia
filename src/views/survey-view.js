@@ -1,12 +1,24 @@
 import React, { useState } from "react";
-import { SURVEYDATA, type_answers_enum } from "../data/survey-data";
+import { SURVEYDATA } from "../data/survey-data";
 import { cache } from "../utils/cache-controller";
+import { useNavigate } from "react-router-dom";
+import { navigateTo } from "../utils/navigation";
+import { Button } from "../components/common/button";
+import { SurveyCard } from "../components/survey/survey-card";
 
 export const SurveyPage = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answerData, setAnswerData] = useState([]);
-  const {title, answers, type, id} = SURVEYDATA.data[`${currentQuestion}`] ?? []
+  const {
+    title,
+    answers,
+    type,
+    id = null,
+  } = SURVEYDATA.data[`${currentQuestion}`] ?? [];
 
+  const navigate = useNavigate();
+  const isLast = !!cache.get("survey-question-6");
+  console.log(isLast);
   const nextQuestion = () => {
     cache.set(`survey-question-${id}`, answerData);
     setAnswerData([]);
@@ -15,10 +27,22 @@ export const SurveyPage = () => {
   const prevQuestion = () => {
     setCurrentQuestion(currentQuestion - 1);
   };
+
+  const handleToCharts = () => {
+    navigateTo("/charts", navigate);
+  };
+  const clearSurvey = () => {
+    for (let i = 0; i <= 6; i++) {
+      console.log(i);
+      cache.remove(`survey-question-${i}`);
+    }
+    window.location.reload();
+  };
+
   return (
     <div
       style={{
-        height: "88vh",
+        height: "100%",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
@@ -38,16 +62,27 @@ export const SurveyPage = () => {
           border: "1px solid rgba(44, 62, 80, 0.5)",
         }}
       >
-        {SURVEYDATA.data[`${currentQuestion}`]?.id <= 6 && (
-          <SurveyCard
-            title={title}
-            answers={answers}
-            type={type}
-            nextQuestion={nextQuestion}
-            prevQuestion={prevQuestion}
-            setAnswerData={setAnswerData}
-            answerData={answerData}
-            id={id}
+        {!isLast ? (
+          SURVEYDATA.data[`${currentQuestion}`]?.id <= 6 && (
+            <SurveyCard
+              title={title}
+              answers={answers}
+              type={type}
+              nextQuestion={nextQuestion}
+              prevQuestion={prevQuestion}
+              setAnswerData={setAnswerData}
+              answerData={answerData}
+              id={id}
+            />
+          )
+        ) : (
+          <InfoCard
+            text={"Ankieta została juz uzupełniona"}
+            text2={"Możesz ponowić ankiete lub sprawdzić wykresy"}
+            handleButton={clearSurvey}
+            handleButton2={handleToCharts}
+            titleBtn={"Ponów"}
+            titleBtn2={"Wykresy"}
           />
         )}
       </div>
@@ -55,107 +90,41 @@ export const SurveyPage = () => {
   );
 };
 
-const SurveyCard = ({
-  title,
-  answers,
-  nextQuestion,
-  prevQuestion,
-  id,
-  setAnswerData,
-  answerData,
-  type,
+const InfoCard = ({
+  text,
+  text2,
+  handleButton,
+  titleBtn,
+  titleBtn2,
+  handleButton2,
 }) => {
   return (
     <div
       style={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-between",
         height: "100%",
+        display: "flex",
+        justifyContent: "space-between",
         alignItems: "center",
+        flexDirection: "column",
       }}
     >
-      <div>{title}</div>
-
-      <AnswersCard
-        answerData={answerData}
-        setAnswerData={setAnswerData}
-        answers={answers}
-        type={type}
-      />
-
-      <div
-        style={{
-          display: "flex",
-          width: "80%",
-          justifyContent: "space-between",
-        }}
-      >
-        {id !== 0 ? (
-          <Button
-            title={"Poprzednie"}
-            handleChangeQuestion={prevQuestion}
-          />
-        ) : (
-          <div />
-        )}
+      <div />
+      <div style={{ textAlign: "center" }}>
+        <div style={{ fontWeight: "bold", fontSize: 20, marginBottom: 10 }}>
+          {text}
+        </div>
+        <div style={{ fontSize: 18 }}>{text2}</div>
+      </div>
+      <div>
         <Button
-          title={"Następne"}
-          handleChangeQuestion={nextQuestion}
+          title={titleBtn}
+          handleChangeQuestion={handleButton}
+        />
+        <Button
+          title={titleBtn2}
+          handleChangeQuestion={handleButton2}
         />
       </div>
-    </div>
-  );
-};
-
-const AnswersCard = ({ answers, setAnswerData, answerData, type }) => {
-  return (
-    <div style={{ width: "50%" }}>
-      {answers.map((answer) => {
-        const dependsType =
-          type === type_answers_enum.single
-            ? answerData[0]?.key === answer?.key
-            : answerData.some((item) => item?.key === answer?.key);
-        return (
-          <div
-            onClick={() => {
-              const isInArray =answerData.some((item) => item?.key === answer?.key);
-              if (!isInArray) {
-                if (type === type_answers_enum.multi) {
-                  setAnswerData((prev) => [...prev, answer]);
-                } else {
-                  setAnswerData([answer]);
-                }
-              } else {
-                const removedItem=answerData.filter((item) => item?.key !== answer?.key);
-                setAnswerData(removedItem);
-              }
-            }}
-            style={{
-              margin: "10px 0px",
-              padding: "10px",
-              borderRadius: 16,
-              textAlign: "center",
-              background: dependsType ? "green" : "white",
-              width: "100%",
-              fontSize: 20,
-            }}
-          >
-            {answer.answer}
-          </div>
-        );
-      })}
-    </div>
-  );
-};
-
-const Button = ({ handleChangeQuestion, title = "" }) => {
-  return (
-    <div
-      style={{ padding: "10px 20px", background: "white", borderRadius: 8 }}
-      onClick={handleChangeQuestion}
-    >
-      {title}
     </div>
   );
 };
