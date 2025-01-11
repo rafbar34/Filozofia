@@ -46,6 +46,7 @@ const AnswerCard = ({ answerData, answer, setAnswerData, type }) => {
         borderRadius: 16,
         textAlign: "center",
         background: dependsType ? "green" : "white",
+        color: dependsType ? "white" : "black",
         width: "100%",
         fontSize: 20,
       }}

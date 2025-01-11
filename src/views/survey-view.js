@@ -18,7 +18,6 @@ export const SurveyPage = () => {
 
   const navigate = useNavigate();
   const isLast = !!cache.get("survey-question-6");
-  console.log(isLast);
   const nextQuestion = () => {
     cache.set(`survey-question-${id}`, answerData);
     setAnswerData([]);

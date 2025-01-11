@@ -7,7 +7,6 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
-  Legend,
   ResponsiveContainer,
   Label,
 } from "recharts";
@@ -88,7 +87,7 @@ const ChartComponent = ({ title, bars, CHART_DATA }) => {
         data={CHART_DATA}
         margin={{
           top: 25,
-          right: 30,
+
           left: 20,
           bottom: 5,
         }}
@@ -101,9 +100,8 @@ const ChartComponent = ({ title, bars, CHART_DATA }) => {
             position="top"
           />
         </XAxis>
-        <YAxis></YAxis>
+        <YAxis/>
         <Tooltip />
-        <Legend />
         {bars.map((bar) => (
           <Bar
             dataKey={`${bar.dataKey}`}

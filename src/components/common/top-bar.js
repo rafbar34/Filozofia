@@ -7,14 +7,15 @@ export const TopBar = () => {
 
   const navigateTo = (prefix) => navigate(prefix);
   return (
-    <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
+    <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh", }}>
       <div
         style={{
           display: "flex",
           flexDirection: "row",
           width: "100%",
           backgroundColor: "#2c3e50",
-          color:"#ffffff"
+          color:"#ffffff",
+          position: "fixed"
         }}
       >
         <Field
