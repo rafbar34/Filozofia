@@ -15,7 +15,8 @@ export const TopBar = () => {
           width: "100%",
           backgroundColor: "#2c3e50",
           color:"#ffffff",
-          position: "fixed"
+          position: "fixed",
+          zIndex:10
         }}
       >
         <Field
@@ -55,7 +56,6 @@ const Field = ({ title, onClick }) => {
         cursor: "pointer",
         fontSize: 18,
         padding: 15,
-        border: "1px solid rgba(78, 192, 241, 0.3)",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",

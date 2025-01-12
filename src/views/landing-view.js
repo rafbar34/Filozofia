@@ -14,8 +14,8 @@ export const LandingPage = () => {
   >
     <header
       style={{
-        backgroundColor: "#007bff",
-        color: "white",
+        backgroundColor: "#e3f2fd",
+        color: "#333",
         textAlign: "center",
         padding: "3rem",
         paddingTop:"5rem",

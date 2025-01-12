@@ -1,6 +1,7 @@
 {
   "name": "filozofia",
   "version": "0.1.0",
+  "homepage" : "https://rafbar34.github.io/The-Omega-Project/",
   "private": true,
   "dependencies": {
     "cra-template": "1.2.0",

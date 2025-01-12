@@ -9,7 +9,7 @@ import { ArticlesPage } from "../views/articles-views";
 
 const Routing = () => {
   return (
-    <Router>
+    <Router basename="/The-Omega-Project">
       <Routes>
         <Route element={<TopBar />}>
           <Route

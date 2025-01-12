@@ -33,14 +33,14 @@ export const ChartsPage = () => {
         title={
           "Jakie są Twoje ogólne odczucia dotyczące sztucznej inteligencji (AI)?"
         }
-        bars={bars.slice(0,5)}
+        bars={bars.slice(0, 5)}
         CHART_DATA={CHART_DATA}
       />
       <ChartComponent
         title={
           "Czy uważasz, że sztuczna inteligencja ma potencjał do poprawy jakości życia?"
         }
-        bars={bars.slice(0,5)}
+        bars={bars.slice(0, 5)}
         CHART_DATA={CHART_DATA2}
       />
       <ChartComponent
@@ -52,22 +52,22 @@ export const ChartsPage = () => {
       />
       <ChartComponent
         title={"Czy masz obawy związane z rozwojem sztucznej inteligencji?"}
-        bars={bars.slice(0,5)}
+        bars={bars.slice(0, 5)}
         CHART_DATA={CHART_DATA4}
       />
       <ChartComponent
         title="W jaki sposób chciałbyś/abyś być informowany/a o pozytywnych aspektach sztucznej inteligencji?"
-        bars={bars.slice(0,5)}
+        bars={bars.slice(0, 5)}
         CHART_DATA={CHART_DATA5}
       />
       <ChartComponent
         title="Jakie zmiany w postrzeganiu sztucznej inteligencji są Twoim zdaniem najważniejsze?"
-        bars={bars.slice(0,5)}
+        bars={bars.slice(0, 5)}
         CHART_DATA={CHART_DATA6}
       />
       <ChartComponent
         title="Czy chciałbyś/abyś dowiedzieć się więcej na temat filozoficznych koncepcji związanych z AI, np. Punktu Omega Pierre’a Teilharda de Chardin?"
-        bars={bars.slice(0,3)}
+        bars={bars.slice(0, 3)}
         CHART_DATA={CHART_DATA7}
       />
     </div>
@@ -100,7 +100,7 @@ const ChartComponent = ({ title, bars, CHART_DATA }) => {
             position="top"
           />
         </XAxis>
-        <YAxis/>
+        <YAxis />
         <Tooltip />
         {bars.map((bar) => (
           <Bar
@@ -108,8 +108,8 @@ const ChartComponent = ({ title, bars, CHART_DATA }) => {
             fill={bar.fill}
             activeBar={
               <Rectangle
-                fill="green"
-                stroke="green"
+                fill={bar.fill}
+                stroke={bar.fill}
               />
             }
           />

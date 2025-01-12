@@ -10,12 +10,12 @@ import { db } from "../data/firebase";
 
 // Hardcoded articles
 const hardcodedArticles = [
-    {
-      id: "article-1",
-      title:
-        "Przyszłość sztucznej inteligencji: Jak AI wprowadza nas w erę nowej świadomości",
-      postedDate: "Styczeń 17, 2025",
-      content: `
+  {
+    id: "article-1",
+    title:
+      "Przyszłość sztucznej inteligencji: Jak AI wprowadza nas w erę nowej świadomości",
+    postedDate: "Styczeń 17, 2025",
+    content: `
         <h3>Wprowadzenie: Sztuczna inteligencja jako punkt przełomowy w ewolucji świadomości</h3>
         <p>
           W miarę jak sztuczna inteligencja (AI) staje się integralną częścią naszej cywilizacji,
@@ -122,12 +122,13 @@ const hardcodedArticles = [
           wyższej jedności i pełni istnienia.
         </p>
       `,
-    },
-    {
-      id: "article-2",
-      title: "AI w służbie sprawiedliwości: Jak sztuczna inteligencja zmienia politykę i systemy społeczne",
-      postedDate: "Styczeń 10, 2025",
-      content: `
+  },
+  {
+    id: "article-2",
+    title:
+      "AI w służbie sprawiedliwości: Jak sztuczna inteligencja zmienia politykę i systemy społeczne",
+    postedDate: "Styczeń 10, 2025",
+    content: `
       <h3>Wprowadzenie: AI jako narzędzie sprawiedliwości społecznej</h3>
       <p>
         Sztuczna inteligencja (AI) zyskuje coraz większe znaczenie w wielu dziedzinach życia społecznego,
@@ -247,12 +248,13 @@ const hardcodedArticles = [
         rozwój ludzkości.
       </p>
     `,
-    },
-    {
-      id: "article-3",
-      title: "Sztuczna inteligencja a rozwój emocjonalny: Jak AI wspiera nas w budowaniu zdolności interpersonalnych",
-      postedDate: "Styczeń 3, 2025",
-      content: `<h3>Wprowadzenie do roli AI w rozwoju inteligencji emocjonalnej</h3>
+  },
+  {
+    id: "article-3",
+    title:
+      "Sztuczna inteligencja a rozwój emocjonalny: Jak AI wspiera nas w budowaniu zdolności interpersonalnych",
+    postedDate: "Styczeń 3, 2025",
+    content: `<h3>Wprowadzenie do roli AI w rozwoju inteligencji emocjonalnej</h3>
 <p>
   Inteligencja emocjonalna (EI) to zdolność rozumienia, kontrolowania i wyrażania własnych emocji, a także umiejętność rozpoznawania emocji innych ludzi oraz skutecznego zarządzania relacjami interpersonalnymi. To pojęcie stało się kluczowe w kontekście współczesnych wyzwań społecznych i zawodowych. Zdolności te są niezbędne nie tylko w życiu osobistym, ale również w świecie pracy, gdzie współpraca, zarządzanie konfliktami oraz empatia odgrywają ogromną rolę.
 </p>
@@ -315,12 +317,13 @@ const hardcodedArticles = [
 <p>
   Z perspektywy filozofii Pierre’a Teilharda de Chardina, AI jest częścią ewolucyjnego procesu, który prowadzi ludzkość ku wyższej jedności i świadomości. Sztuczna inteligencja, jako narzędzie wspierające rozwój zdolności interpersonalnych, może stać się kluczowym elementem w drodze do bardziej zjednoczonego, empatycznego i świadomego społeczeństwa.
 </p>`,
-    },
-    {
-        id: "article-4",
-        title: "AI i rewolucja ontologiczna: Jak sztuczna inteligencja zmienia nasze rozumienie bytu i świadomości",
-        postedDate: "Grudzień 27, 2024",
-        content: `<h3>Wprowadzenie do ontologii i AI</h3>
+  },
+  {
+    id: "article-4",
+    title:
+      "AI i rewolucja ontologiczna: Jak sztuczna inteligencja zmienia nasze rozumienie bytu i świadomości",
+    postedDate: "Grudzień 27, 2024",
+    content: `<h3>Wprowadzenie do ontologii i AI</h3>
 <p>
   Ontologia, będąca jednym z głównych działów filozofii, zajmuje się badaniem natury bytu, tożsamości, 
   oraz struktury rzeczywistości. Pytania o to, co istnieje, czym jest byt i jak rozumieć istnienie, 
@@ -425,12 +428,13 @@ const hardcodedArticles = [
   i zrozumienie. AI, zamiast stanowić zagrożenie, może stać się kluczowym elementem w rozwoju naszej 
   zbiorowej świadomości i tożsamości.
 </p>`,
-      },
-      {
-        id: "article-5",
-        title: "AI w erze humanizmu: Jak sztuczna inteligencja może wspierać rozwój moralny i społeczny",
-        postedDate: "Gurdzień 20, 2024",
-        content: `<h3>Technologie a wartości humanistyczne</h3>
+  },
+  {
+    id: "article-5",
+    title:
+      "AI w erze humanizmu: Jak sztuczna inteligencja może wspierać rozwój moralny i społeczny",
+    postedDate: "Gurdzień 20, 2024",
+    content: `<h3>Technologie a wartości humanistyczne</h3>
 <p>
   W dzisiejszych czasach, kiedy technologia – a zwłaszcza sztuczna inteligencja (AI) – staje się nieodłącznym
   elementem naszego życia, pojawia się pytanie o jej rolę w społeczeństwie. Czy AI to tylko narzędzie
@@ -539,12 +543,13 @@ const hardcodedArticles = [
   wspierała moralny i społeczny rozwój ludzkości, przyczyniając się do realizacji wizji
   harmonijnego świata, w którym człowiek i technologia współistnieją w pełnej zgodzie.
 </p>`,
-      },
-      {
-        id: "article-6",
-        title: "AI i rewolucja ontologiczna: Jak sztuczna inteligencja zmienia nasze rozumienie bytu i świadomości",
-        postedDate: "Grudzień 13, 2024",
-        content: `<h3>Wprowadzenie do ontologii i AI</h3>
+  },
+  {
+    id: "article-6",
+    title:
+      "AI i rewolucja ontologiczna: Jak sztuczna inteligencja zmienia nasze rozumienie bytu i świadomości",
+    postedDate: "Grudzień 13, 2024",
+    content: `<h3>Wprowadzenie do ontologii i AI</h3>
 <p>
   Ontologia, będąca gałęzią filozofii zajmującą się badaniem natury bytu, to dziedzina,
   która stawia fundamentalne pytania o istnienie, tożsamość i struktury rzeczywistości.
@@ -659,12 +664,13 @@ const hardcodedArticles = [
   stać się kluczowym elementem w dalszym rozwoju naszej zbiorowej świadomości.
 </p>
 `,
-      },
-      {
-        id: "article-7",
-        title: "AI jako narzędzie ekofilozofii: Jak sztuczna inteligencja wspiera harmonijne życie z naturą",
-        postedDate: "Grudzień 6, 2024",
-        content: `<h3>Wstęp do ekofilozofii i roli AI w ochronie środowiska</h3>
+  },
+  {
+    id: "article-7",
+    title:
+      "AI jako narzędzie ekofilozofii: Jak sztuczna inteligencja wspiera harmonijne życie z naturą",
+    postedDate: "Grudzień 6, 2024",
+    content: `<h3>Wstęp do ekofilozofii i roli AI w ochronie środowiska</h3>
 <p>
   Ekofilozofia to kierunek myślenia, który podkreśla konieczność zrównoważonego i harmonijnego
   współżycia człowieka z naturą. W obliczu rosnących wyzwań związanych z degradacją środowiska
@@ -780,12 +786,13 @@ const hardcodedArticles = [
   naszej planety.
 </p>
 `,
-      },
-      {
-        id: "article-8",
-        title: "Sztuczna inteligencja i transcendencja: Jak AI może wspierać duchowy rozwój człowieka",
-        postedDate: "Listopad 29, 2024",
-        content: `<h3>Sztuczna inteligencja a duchowy rozwój</h3>
+  },
+  {
+    id: "article-8",
+    title:
+      "Sztuczna inteligencja i transcendencja: Jak AI może wspierać duchowy rozwój człowieka",
+    postedDate: "Listopad 29, 2024",
+    content: `<h3>Sztuczna inteligencja a duchowy rozwój</h3>
 <p>
   Sztuczna inteligencja, choć najczęściej kojarzona z technologią, automatyką czy rozwiązywaniem
   problemów praktycznych, ma również potencjał do wpływania na obszary, które tradycyjnie
@@ -884,12 +891,13 @@ const hardcodedArticles = [
   zarówno w wymiarze materialnym, jak i duchowym.
 </p>
 `,
-      },
-      {
-        id: "article-9",
-        title: "AI w przestrzeni miejskiej: Technologie AI w zarządzaniu miastami i ich wpływ na rozwój urbanistyczny",
-        postedDate: "Listopad 22, 2024",
-        content: `<h3>Jak AI wspiera zarządzanie miastami?</h3>
+  },
+  {
+    id: "article-9",
+    title:
+      "AI w przestrzeni miejskiej: Technologie AI w zarządzaniu miastami i ich wpływ na rozwój urbanistyczny",
+    postedDate: "Listopad 22, 2024",
+    content: `<h3>Jak AI wspiera zarządzanie miastami?</h3>
 <p>
   Sztuczna inteligencja (AI) wkracza do przestrzeni miejskiej, wprowadzając rozwiązania,
   które zmieniają sposób zarządzania miastami, poprawiając komfort życia ich mieszkańców
@@ -993,12 +1001,13 @@ const hardcodedArticles = [
   i dostępnych dla wszystkich mieszkańców.
 </p>
 `,
-      },
-      {
-        id: "article-10",
-        title: "Sztuczna inteligencja jako element ewolucji ludzkości: Wprowadzenie do wizji Pierre’a Teilharda de Chardina",
-        postedDate: "Listopad 15, 2024",
-        content: `<h3>Filozofia Teilharda de Chardina i koncepcja „Punktu Omega”</h3>
+  },
+  {
+    id: "article-10",
+    title:
+      "Sztuczna inteligencja jako element ewolucji ludzkości: Wprowadzenie do wizji Pierre’a Teilharda de Chardina",
+    postedDate: "Listopad 15, 2024",
+    content: `<h3>Filozofia Teilharda de Chardina i koncepcja „Punktu Omega”</h3>
 <p>
   Pierre Teilhard de Chardin, francuski filozof, teolog i paleontolog, stworzył jedną
   z najbardziej inspirujących wizji ewolucji ludzkości. Jego myśl opiera się na przekonaniu,
@@ -1080,17 +1089,17 @@ const hardcodedArticles = [
   zbliżając nas do realizacji wizji Punktu Omega.
 </p>
 `,
-      },
-  ];
-  
+  },
+];
 
 export const ArticlesPage = () => {
   const [articles, setArticles] = useState([]);
-
+  const [isLoading, setIsLoading] = useState(false);
   // On mount, fetch comments for each hardcoded article from Firestore
   useEffect(() => {
     const fetchCommentsForArticles = async () => {
       try {
+        setIsLoading(true);
         const updatedArticles = [];
         for (const article of hardcodedArticles) {
           const articleRef = doc(collection(db, "articles"), article.id);
@@ -1107,6 +1116,7 @@ export const ArticlesPage = () => {
           });
         }
         setArticles(updatedArticles);
+        setIsLoading(false);
       } catch (error) {
         console.error("Błąd podczas pobierania komentarzy do artykułu:", error);
       }
@@ -1118,9 +1128,9 @@ export const ArticlesPage = () => {
   // Handler for adding comments to an article
   const handleAddComment = async (articleId, newComment) => {
     if (!newComment.trim()) return;
-  
+
     const articleRef = doc(db, "articles", articleId);
-  
+
     try {
       // If doc does not exist, Firestore creates it. If doc does exist, Firestore updates it.
       await setDoc(
@@ -1130,7 +1140,7 @@ export const ArticlesPage = () => {
         },
         { merge: true }
       );
-  
+
       // Update local state so the UI reflects the new comment
       setArticles((prevArticles) =>
         prevArticles.map((article) =>
@@ -1173,13 +1183,17 @@ export const ArticlesPage = () => {
           marginBottom: 40,
         }}
       >
-        {articles.map((article) => (
-          <ArticleCard
-            key={article.id}
-            article={article}
-            onAddComment={handleAddComment}
-          />
-        ))}
+        {isLoading ? (
+          <div>Ładowanie</div>
+        ) : (
+          articles.map((article) => (
+            <ArticleCard
+              key={article.id}
+              article={article}
+              onAddComment={handleAddComment}
+            />
+          ))
+        )}
       </div>
     </div>
   );
@@ -1235,11 +1249,17 @@ const ArticleCard = ({ article, onAddComment }) => {
             marginBottom: 20,
           }}
         >
-          {[...comments].slice().reverse().map((comment, idx) => (
-            <li key={idx} style={{ marginBottom: 8 }}>
-              {comment}
-            </li>
-          ))}
+          {[...comments]
+            .slice()
+            .reverse()
+            .map((comment, idx) => (
+              <li
+                key={idx}
+                style={{ marginBottom: 8 }}
+              >
+                {comment}
+              </li>
+            ))}
         </ul>
       ) : (
         <div style={{ marginBottom: 20, fontStyle: "italic" }}>
