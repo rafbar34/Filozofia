@@ -23,6 +23,10 @@ export const TopBar = () => {
           title="Strona głowna"
         />
         <Field
+        onClick={() => navigateTo("/artykuly")}
+        title="Artykuły"
+        />
+        <Field
           onClick={() => navigateTo("/blog")}
           title="Blog"
         />
